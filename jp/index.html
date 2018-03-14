@@ -12,11 +12,15 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/product.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/prettify.css">
+    <!--link href="../css/vibrant-ink.css" rel="stylesheet"-->
 
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/mystyle.css" rel="stylesheet">
+
+    <!--script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script-->
   </head>
 
   <body>
@@ -33,7 +37,7 @@
                 <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#news">News</a>
+                <a class="nav-link" href="./ref/index.html">リファレンス</a>
               </li>
         </ul>
         <ul class="nav navbar-nav">
@@ -74,7 +78,7 @@
         <div class="row">
           <div class="col-lg-4">
             <i class="fas fa-code fa-5x fa-fw"></i>
-            <h2>Python3</h2>
+            <h3>Python3</h3>
               <p>
                 Python 3を用いて自動交渉エージェントが開発できます．
               </p>
@@ -82,17 +86,30 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
               <i class="fas fa-database fa-5x fa-fw"></i>
-              <h2>機械学習</h2>
+              <h3>機械学習</h3>
               <p>自動交渉エージェントの開発に、機械学習ライブラリを容易に用いることができます．</p>
               <!--p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p-->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <i class="fas fa-exchange-alt fa-5x fa-fw"></i>
-              <h2>互換性</h2>
+              <h3>互換性</h3>
               <p>GENIUS上でJavaを用いて実装された自動交渉エージェントを使うことができます．</p>
               <!--p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p-->
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
+    </div>
+
+    <div class="container">
+      <h2>インストール方法</h2>
+      <p>
+        JupiterはPyPIにパッケージ登録されているため，pipを用いてインストールをすることができます．
+      </p>
+<pre class="prettyprint">
+<code>
+    # bash
+    $ pip install jupiter-negotiation
+</code>
+</pre>
     </div>
 
     <div class="container" id="news">
@@ -104,7 +121,7 @@
                 <div class="card-body d-flex flex-column align-items-start">
                   <strong class="d-inline-block mb-2 text-primary">Competition</strong>
                   <h3 class="mb-0">
-                    <a class="text-dark" href="#">JSAI2018 Competition</a>
+                    <a class="text-dark" href="http://www.itolab.nitech.ac.jp/ICAN/competitions/ICAN2018.html">JSAI2018 Competition</a>
                   </h3>
                   <div class="mb-1 text-muted">6月5日 - 8日</div>
                   <p class="card-text mb-auto">
@@ -134,5 +151,12 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/holder.min.js"></script>
+    <script src="../js/prettify.js"></script>
+
+    <script>
+      $(function(){
+          prettyPrint(); 
+      });
+    </script>
   </body>
 </html>

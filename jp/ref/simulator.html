@@ -1,0 +1,1893 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>simulator package &mdash; jupiter 1.0.0alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="jupiter 1.0.0alpha documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to simulator’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> jupiter
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">simulator package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.abstractAgent">simulator.abstractAgent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.abstractUtilitySpace">simulator.abstractUtilitySpace module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.agentAction">simulator.agentAction module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.bid">simulator.bid module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.calculator">simulator.calculator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.comunicateJavaAgent">simulator.comunicateJavaAgent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.display">simulator.display module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.jupiter">simulator.jupiter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.matplotrecorder">simulator.matplotrecorder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.negotiationRule">simulator.negotiationRule module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.readUtilityFile">simulator.readUtilityFile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.summrizationOfUtilitySpace">simulator.summrizationOfUtilitySpace module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-simulator.utilitySpace">simulator.utilitySpace module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">jupiter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>simulator package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/simulator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="simulator-package">
+<h1>simulator package<a class="headerlink" href="#simulator-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-simulator.abstractAgent">
+<span id="simulator-abstractagent-module"></span><h2>simulator.abstractAgent module<a class="headerlink" href="#module-simulator.abstractAgent" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.abstractAgent.AbstractAgent">
+<em class="property">class </em><code class="descclassname">simulator.abstractAgent.</code><code class="descname">AbstractAgent</code><span class="sig-paren">(</span><em>utility_space: simulator.abstractUtilitySpace.AbstractUtilitySpace</em>, <em>negotiation_rule: simulator.negotiationRule.NegotiationRule</em>, <em>agent_id: int</em>, <em>agent_num: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>abstract class about a automated agent</p>
+<p>if you make automated agent, please inherit this class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>utility_space</strong> (<a class="reference internal" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace" title="simulator.abstractUtilitySpace.AbstractUtilitySpace"><em>AbstractUtilitySpace</em></a>) – 効用空間の情報が取得できる</li>
+<li><strong>negotiation_rule</strong> (<a class="reference internal" href="#simulator.negotiationRule.NegotiationRule" title="simulator.negotiationRule.NegotiationRule"><em>NegotiationRule</em></a>) – 交渉の時間やタイプ，現在の正規化時間が取得できる</li>
+<li><strong>agent_id</strong> (<em>int</em>) – 自分のエージェントに割り振られたid</li>
+<li><strong>agent_num</strong> (<em>int</em>) – 交渉参加エージェントの数</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.abstractAgent.AbstractAgent.receive_action">
+<code class="descname">receive_action</code><span class="sig-paren">(</span><em>agent_action: simulator.agentAction.AbstractAction</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent.receive_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent.receive_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>他エージェントが行動を起こした場合に，その行動が通知される</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_action</strong> (<a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><em>AbstractAction</em></a>) – 他のエージェントが起こした行動</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractAgent.AbstractAgent.send_action">
+<code class="descname">send_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; simulator.agentAction.AbstractAction<a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent.send_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent.send_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>自分のターンが回ってきた際に呼び出され，どの行動を起こすか返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction">AbstractAction</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Accept,Offer,EndNegotiationのいずれかを返す</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractAgent.AbstractAgent.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>自分のエージェントの名前を返す．クラス名と同じにすることを推奨</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">エージェントの名前．クラス名と同じにすることを推奨</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractAgent.AbstractAgent.receive_start_negotiation">
+<code class="descname">receive_start_negotiation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent.receive_start_negotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent.receive_start_negotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答ゲームを行う際に，提案応答ゲームが開始される際に呼び出される</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractAgent.AbstractAgent.receive_end_negotiation">
+<code class="descname">receive_end_negotiation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractAgent.html#AbstractAgent.receive_end_negotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractAgent.AbstractAgent.receive_end_negotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答ゲームを行う際に，提案応答ゲームが終了される際に呼び出される</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.abstractUtilitySpace">
+<span id="simulator-abstractutilityspace-module"></span><h2>simulator.abstractUtilitySpace module<a class="headerlink" href="#module-simulator.abstractUtilitySpace" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace">
+<em class="property">class </em><code class="descclassname">simulator.abstractUtilitySpace.</code><code class="descname">AbstractUtilitySpace</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>効用情報の抽象クラス</p>
+<p>効用情報のクラスはこのクラスを継承すること</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name</strong> (<em>str</em>) – 交渉ドメインファイルのパス</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace.get_reservation_value">
+<code class="descname">get_reservation_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace.get_reservation_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace.get_reservation_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>留保価格を返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">留保価格</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace.get_discount_factor">
+<code class="descname">get_discount_factor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace.get_discount_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace.get_discount_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引効用を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">割引効用</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace.get_utility">
+<code class="descname">get_utility</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace.get_utility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace.get_utility" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用値を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bid</strong> (<a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid"><em>Bid</em></a>) – 効用値を計算するbid</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">効用値</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace.get_utility_discounted">
+<code class="descname">get_utility_discounted</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em>, <em>time: float</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace.get_utility_discounted"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace.get_utility_discounted" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引済み効用値を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bid</strong> (<a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid"><em>Bid</em></a>) – 効用値を計算するbid</li>
+<li><strong>time</strong> (<em>float</em>) – 交渉の経過時間(0&lt;=time&lt;=1)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">割引済み効用値</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.abstractUtilitySpace.AbstractUtilitySpace.get_file_name">
+<code class="descname">get_file_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="_modules/simulator/abstractUtilitySpace.html#AbstractUtilitySpace.get_file_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace.get_file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉ドメインファイルのパスを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">交渉ドメインファイルのパス</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.agentAction">
+<span id="simulator-agentaction-module"></span><h2>simulator.agentAction module<a class="headerlink" href="#module-simulator.agentAction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.agentAction.AbstractAction">
+<em class="property">class </em><code class="descclassname">simulator.agentAction.</code><code class="descname">AbstractAction</code><span class="sig-paren">(</span><em>agent_id: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#AbstractAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.AbstractAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>自動交渉エージェントが起こすActionの抽象クラス
+各Actionはこのクラスを継承すること</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_id</strong> (<em>int</em>) – 行動を起こしたエージェントに割り振られるid</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.agentAction.AbstractAction.set_time_offered">
+<code class="descname">set_time_offered</code><span class="sig-paren">(</span><em>time: float</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#AbstractAction.set_time_offered"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.AbstractAction.set_time_offered" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こした時間がsetされる</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<em>float</em>) – 行動を起こした時間</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.agentAction.AbstractAction.get_time_offered">
+<code class="descname">get_time_offered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#AbstractAction.get_time_offered"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.AbstractAction.get_time_offered" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こした時間を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">行動を起こした時間</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.agentAction.Accept">
+<em class="property">class </em><code class="descclassname">simulator.agentAction.</code><code class="descname">Accept</code><span class="sig-paren">(</span><em>agent_id: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Accept"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><code class="xref py py-class docutils literal"><span class="pre">simulator.agentAction.AbstractAction</span></code></a></p>
+<p>エージェントが起こすことのできる行動の1つ
+受容を表す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_id</strong> (<em>int</em>) – 行動を起こしたエージェントに割り振られたid</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.agentAction.Accept.set_bid">
+<code class="descname">set_bid</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Accept.set_bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Accept.set_bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>受容したbidがsetされる</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bid</strong> (<a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid"><em>Bid</em></a>) – 受容したBid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.agentAction.Accept.get_agent_id">
+<code class="descname">get_agent_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Accept.get_agent_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Accept.get_agent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こしたエージェントのidを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">行動を起こしたエージェントのid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.agentAction.Accept.get_bid">
+<code class="descname">get_bid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Accept.get_bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Accept.get_bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>受容したBidを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid">Bid</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">受容した提案</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.agentAction.Offer">
+<em class="property">class </em><code class="descclassname">simulator.agentAction.</code><code class="descname">Offer</code><span class="sig-paren">(</span><em>agent_id</em>, <em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Offer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Offer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><code class="xref py py-class docutils literal"><span class="pre">simulator.agentAction.AbstractAction</span></code></a></p>
+<p>エージェントが起こすことのできる行動の1つ
+提案を表す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_id</strong> (<em>int</em>) – 行動を起こしたエージェントに割り振られたid</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.agentAction.Offer.get_agent_id">
+<code class="descname">get_agent_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Offer.get_agent_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Offer.get_agent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こしたエージェントのidを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">行動を起こしたエージェントのid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.agentAction.Offer.get_bid">
+<code class="descname">get_bid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#Offer.get_bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.Offer.get_bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid">Bid</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">エージェントの提案</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.agentAction.EndNegotiation">
+<em class="property">class </em><code class="descclassname">simulator.agentAction.</code><code class="descname">EndNegotiation</code><span class="sig-paren">(</span><em>agent_id: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#EndNegotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.EndNegotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><code class="xref py py-class docutils literal"><span class="pre">simulator.agentAction.AbstractAction</span></code></a></p>
+<p>エージェントが起こすことのできる行動の1つ
+交渉打ち切りを表す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_id</strong> (<em>int</em>) – 行動を起こしたエージェントに割り振られたid</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.agentAction.EndNegotiation.get_agent_id">
+<code class="descname">get_agent_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/agentAction.html#EndNegotiation.get_agent_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.agentAction.EndNegotiation.get_agent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こしたエージェントのidを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">行動を起こしたエージェントのid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.bid">
+<span id="simulator-bid-module"></span><h2>simulator.bid module<a class="headerlink" href="#module-simulator.bid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.bid.Bid">
+<em class="property">class </em><code class="descclassname">simulator.bid.</code><code class="descname">Bid</code><span class="sig-paren">(</span><em>issue_size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/bid.html#Bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.bid.Bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>自動交渉エージェント間で交換されるBid
+Offer，Acceptクラスを作成する際に用いる</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>issue_size1</strong> (<em>List</em>) – 提案したい内容のindexのリスト</li>
+<li><strong>issue_size2</strong> (<em>int</em>) – 交渉ドメインの各論点の数</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.bid.Bid.set_issue_by_list">
+<code class="descname">set_issue_by_list</code><span class="sig-paren">(</span><em>index_list: typing.List[int]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/bid.html#Bid.set_issue_by_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.bid.Bid.set_issue_by_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>listオブジェクトにより提案Bidをsetする</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>issue_size</strong> (<em>list</em>) – 提案したい内容のindexのリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.bid.Bid.set_issue_by_index">
+<code class="descname">set_issue_by_index</code><span class="sig-paren">(</span><em>issue_index: int</em>, <em>item_index: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/bid.html#Bid.set_issue_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.bid.Bid.set_issue_by_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>論点のindexを指定して，その論点に指定したindexをsetする</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>issue_index</strong> (<em>int</em>) – setしたい論点のindex</li>
+<li><strong>item_index</strong> (<em>int</em>) – setしたいitemのindex</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.bid.Bid.get_indexes">
+<code class="descname">get_indexes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/bid.html#Bid.get_indexes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.bid.Bid.get_indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>行動を起こした時間を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">行動を起こした時間</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.calculator">
+<span id="simulator-calculator-module"></span><h2>simulator.calculator module<a class="headerlink" href="#module-simulator.calculator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.calculator.Calculator">
+<em class="property">class </em><code class="descclassname">simulator.calculator.</code><code class="descname">Calculator</code><span class="sig-paren">(</span><em>issue_size_list: typing.List[int], weight_np_list: typing.List[&lt;built-in function array&gt;], discount_list: typing.List[float], reservation_value_list: typing.List[float]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>issue_size_list</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – 交渉ドメインの各論点の数のList</li>
+<li><strong>weight_np_list</strong> (<em>List</em><em>[</em><em>np.array</em><em>]</em>) – 各エージェントが持つ効用値のList</li>
+<li><strong>discount_list</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – 各エージェントが持つ割引効用のList</li>
+<li><strong>reservation_value_list</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – 各エージェントが持つ留保価格のList</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_agreement_points">
+<code class="descname">get_agreement_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_agreement_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_agreement_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>合意案を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[[int], [float]]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">合意案のインデックスのリスト，全プレイヤーのその効用値のリスト，のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_parato_points">
+<code class="descname">get_parato_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_parato_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_parato_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>パレート点を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[[int], [float]]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">パレート点のインデックスのリスト，全プレイヤーの効用値のリスト，のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_utilities">
+<code class="descname">get_utilities</code><span class="sig-paren">(</span><em>index_list_list: [[[&lt;class 'int'&gt;], &lt;class 'float'&gt;]]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_utilities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_utilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_utility">
+<code class="descname">get_utility</code><span class="sig-paren">(</span><em>index_list: [&lt;class 'int'&gt;], time=0.0, is_discounted=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_utility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_utility" title="Permalink to this definition">¶</a></dt>
+<dd><p>全プレイヤーの効用値のリストを返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index_list</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – 計算したい提案のindexのリスト</li>
+<li><strong>time</strong> (<em>float</em>) – 提案が行われた時間</li>
+<li><strong>is_discounted</strong> (<em>bool</em>) – 割引効用を加味するかどうかのフラグ</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">List[float]</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">全プレイヤーの効用値のリスト</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_discount_reservation_value_list">
+<code class="descname">get_discount_reservation_value_list</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_discount_reservation_value_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_discount_reservation_value_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引された留保価格のリストを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>float</strong> (<em>time</em>) – 提案が行われた時間</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">割引された留保価格のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_parato_distance">
+<code class="descname">get_parato_distance</code><span class="sig-paren">(</span><em>index_list: typing.List[int], time: float</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_parato_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_parato_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>パレート距離を計算する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>index_list</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – 計算したい提案のindexのリスト</li>
+<li><strong>float</strong> (<em>time</em>) – 提案が行われた時間</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">パレート距離</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.calculator.Calculator.get_nash_distance">
+<code class="descname">get_nash_distance</code><span class="sig-paren">(</span><em>index_list: typing.List[int]</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/calculator.html#Calculator.get_nash_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.calculator.Calculator.get_nash_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>ナッシュ距離を計算する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index_list</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – 計算したい提案のindexのリスト</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ナッシュ距離</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.comunicateJavaAgent">
+<span id="simulator-comunicatejavaagent-module"></span><h2>simulator.comunicateJavaAgent module<a class="headerlink" href="#module-simulator.comunicateJavaAgent" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.comunicateJavaAgent.JavaAgent">
+<em class="property">class </em><code class="descclassname">simulator.comunicateJavaAgent.</code><code class="descname">JavaAgent</code><span class="sig-paren">(</span><em>setting_file_name: str</em>, <em>utility_space: simulator.abstractUtilitySpace.AbstractUtilitySpace</em>, <em>negotiation_rule: simulator.negotiationRule.NegotiationRule</em>, <em>agent_id: int</em>, <em>agent_num: int</em>, <em>port: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/comunicateJavaAgent.html#JavaAgent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.comunicateJavaAgent.JavaAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.abstractAgent.AbstractAgent" title="simulator.abstractAgent.AbstractAgent"><code class="xref py py-class docutils literal"><span class="pre">simulator.abstractAgent.AbstractAgent</span></code></a></p>
+<p>Genius実装のJava言語エージェントと通信を行う．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>setting_file_name</strong> (<em>str</em>) – 効用ドメインファイルのパス</li>
+<li><strong>utility_space</strong> (<a class="reference internal" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace" title="simulator.abstractUtilitySpace.AbstractUtilitySpace"><em>AbstractUtilitySpace</em></a>) – 効用空間の情報が取得できる</li>
+<li><strong>negotiation_rule</strong> (<a class="reference internal" href="#simulator.negotiationRule.NegotiationRule" title="simulator.negotiationRule.NegotiationRule"><em>NegotiationRule</em></a>) – 交渉の時間やタイプ，現在の正規化時間が取得できる</li>
+<li><strong>agent_id</strong> (<em>int</em>) – 自分のエージェントに割り振られたid</li>
+<li><strong>agent_num</strong> (<em>int</em>) – 交渉参加エージェントの数</li>
+<li><strong>port</strong> (<em>int</em>) – 通信を行うポート番号</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.comunicateJavaAgent.JavaAgent.receive_action">
+<code class="descname">receive_action</code><span class="sig-paren">(</span><em>agent_action: simulator.agentAction.AbstractAction</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/comunicateJavaAgent.html#JavaAgent.receive_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.comunicateJavaAgent.JavaAgent.receive_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>他エージェントが行動を起こした場合に，その行動が通知される</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_action</strong> (<a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><em>AbstractAction</em></a>) – 他のエージェントが起こした行動</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.comunicateJavaAgent.JavaAgent.send_action">
+<code class="descname">send_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/comunicateJavaAgent.html#JavaAgent.send_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.comunicateJavaAgent.JavaAgent.send_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>自分のターンが回ってきた際に呼び出され，どの行動を起こすか返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction">AbstractAction</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Accept,Offer,EndNegotiationのいずれかを返す</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.comunicateJavaAgent.JavaAgent.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/comunicateJavaAgent.html#JavaAgent.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.comunicateJavaAgent.JavaAgent.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>自分のエージェントの名前を返す．クラス名と同じにすることを推奨</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">エージェントの名前．クラス名と同じにすることを推奨</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.comunicateJavaAgent.JavaAgent.receive_start_negotiation">
+<code class="descname">receive_start_negotiation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/comunicateJavaAgent.html#JavaAgent.receive_start_negotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.comunicateJavaAgent.JavaAgent.receive_start_negotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答ゲームを行う際に，提案応答ゲームが開始される際に呼び出される</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.display">
+<span id="simulator-display-module"></span><h2>simulator.display module<a class="headerlink" href="#module-simulator.display" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.display.Display">
+<em class="property">class </em><code class="descclassname">simulator.display.</code><code class="descname">Display</code><span class="sig-paren">(</span><em>issue_size_list</em>, <em>weight_np_list</em>, <em>discount_list</em>, <em>reservation_value_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>描画処理を行う</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>issue_size_list</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – 交渉ドメインの各論点の数のList</li>
+<li><strong>weight_np_list</strong> (<em>List</em><em>[</em><em>np.array</em><em>]</em>) – 各エージェントが持つ効用値のList</li>
+<li><strong>discount_list</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – 各エージェントが持つ割引効用のList</li>
+<li><strong>reservation_value_list</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – 各エージェントが持つ留保価格のList</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.display.Display.plot_initialize">
+<code class="descname">plot_initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.plot_initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.plot_initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画について，初期化する</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.delete_plot">
+<code class="descname">delete_plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.delete_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.delete_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画について，前回描画してきた内容をdeleteする．</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.plot2_notebook">
+<code class="descname">plot2_notebook</code><span class="sig-paren">(</span><em>action_list</em>, <em>get_agreement</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.plot2_notebook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.plot2_notebook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.plot3_notebook">
+<code class="descname">plot3_notebook</code><span class="sig-paren">(</span><em>action_list</em>, <em>get_agreement</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.plot3_notebook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.plot3_notebook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉終了時に描画を消したくない場合は，この関数を呼び出す．</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>action_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画内容を動的に書き換える</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action_list</strong> (<em>List</em><em>[</em><a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><em>AbstractAction</em></a><em>]</em>) – 描画を行いたいactionのリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.update_end">
+<code class="descname">update_end</code><span class="sig-paren">(</span><em>action_list</em>, <em>get_agreement</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.update_end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.update_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画内容を動的に書き換える</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>action_list</strong> (<em>List</em><em>[</em><a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><em>AbstractAction</em></a><em>]</em>) – 描画を行いたいActionのリスト</li>
+<li><strong>AbstractAction</strong><strong>] </strong><strong>get_agreement</strong> (<em>[</em><em>bool</em><em>,</em>) – 合意成功かどうかのフラグ，交渉終了の際のAction，のリスト</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.set_agent_name">
+<code class="descname">set_agent_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.set_agent_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.set_agent_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉参加エージェントの名前をセットする．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – エージェントの名前</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.get_parato_distance">
+<code class="descname">get_parato_distance</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.get_parato_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.get_parato_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>パレート距離を取得する．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<a class="reference internal" href="#simulator.agentAction.AbstractAction" title="simulator.agentAction.AbstractAction"><em>AbstractAction</em></a>) – エージェントの名前</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">パレート距離</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.set_save_flag">
+<code class="descname">set_save_flag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.set_save_flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.set_save_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画してきた内容について，pngとgifで保存する場合にセットするフラグ</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.display.Display.set_jupyter_notebook_flag">
+<code class="descname">set_jupyter_notebook_flag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/display.html#Display.set_jupyter_notebook_flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.display.Display.set_jupyter_notebook_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>jupyter notebook上で実行したい場合にセットするフラグ．</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.jupiter">
+<span id="simulator-jupiter-module"></span><h2>simulator.jupiter module<a class="headerlink" href="#module-simulator.jupiter" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.jupiter.Jupiter">
+<em class="property">class </em><code class="descclassname">simulator.jupiter.</code><code class="descname">Jupiter</code><span class="sig-paren">(</span><em>negotiation_type</em>, <em>negotiation_time: int</em>, <em>setting_file_name</em>, <em>*file_names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>自動交渉を行うクラス</p>
+<p>また，全体の管理を行う．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>negotiation_type</strong> (<a class="reference internal" href="#simulator.negotiationRule.TypeOfNegotiation" title="simulator.negotiationRule.TypeOfNegotiation"><em>TypeOfNegotiation</em></a>) – 交渉のタイプ</li>
+<li><strong>negotiation_time</strong> (<em>int</em>) – 交渉の最大時間</li>
+<li><strong>setting_file_name</strong> (<em>str</em>) – 交渉ドメインの設定ファイル</li>
+<li><strong>file_names</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – 交渉ドメインファイルのリスト</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.get_action_list_list">
+<code class="descname">get_action_list_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.get_action_list_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.get_action_list_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.get_get_agreement_list">
+<code class="descname">get_get_agreement_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.get_get_agreement_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.get_get_agreement_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.get_end_utility_list">
+<code class="descname">get_end_utility_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.get_end_utility_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.get_end_utility_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_agent">
+<code class="descname">set_agent</code><span class="sig-paren">(</span><em>module</em>, <em>class_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>エージェントを登録する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>module</strong> (<em>module</em>) – 自動交渉エージェントのモジュール</li>
+<li><strong>class_name</strong> (<em>str</em>) – 自動交渉エージェントのクラス名</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_agent_by_name">
+<code class="descname">set_agent_by_name</code><span class="sig-paren">(</span><em>module_name</em>, <em>agent_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_agent_by_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_agent_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>エージェントを登録する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>module</strong> (<em>module</em>) – 自動交渉エージェントのモジュール</li>
+<li><strong>class_name</strong> (<em>str</em>) – 自動交渉エージェントのクラス名</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_name">
+<code class="descname">set_name</code><span class="sig-paren">(</span><em>agent_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>エージェントを登録する．
+デバッグ用</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>agent_name</strong> (<em>str</em>) – 自動交渉を行うエージェントを登録する</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_java_agent">
+<code class="descname">set_java_agent</code><span class="sig-paren">(</span><em>port: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_java_agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_java_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Java実装エージェントと通信を行うエージェントを登録する．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<em>int</em>) – 通信するポート番号</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.do_negotiation">
+<code class="descname">do_negotiation</code><span class="sig-paren">(</span><em>is_printing: bool</em>, <em>print_times=10</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.do_negotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.do_negotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答ゲームを行う</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>is_printing</strong> (<em>bool</em>) – 描画するかどうかのフラグ</li>
+<li><strong>print_times</strong> (<em>int</em>) – 何巡毎に描画を行うか</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">正常に自動交渉が終了したかどうかのbool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.do_negotiation_gui">
+<code class="descname">do_negotiation_gui</code><span class="sig-paren">(</span><em>is_printing: bool</em>, <em>print_times=10</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.do_negotiation_gui"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.do_negotiation_gui" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答ゲームを行う</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>is_printing</strong> (<em>bool</em>) – 描画するかどうかのフラグ</li>
+<li><strong>print_times</strong> (<em>int</em>) – 何巡毎に描画を行うか</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">正常に自動交渉が終了したかどうかのbool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_save_pictures_Flag">
+<code class="descname">set_save_pictures_Flag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_save_pictures_Flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_save_pictures_Flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>描画内容のセーブフラグを立てる．</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.set_notebook_flag">
+<code class="descname">set_notebook_flag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.set_notebook_flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.set_notebook_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>jupyter notebook上で実行する際に，そのフラグを立てる．</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.save_history_as_json">
+<code class="descname">save_history_as_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.save_history_as_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.save_history_as_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>提案応答履歴をjson形式で保存する．</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.jupiter.Jupiter.get_agent_num">
+<code class="descname">get_agent_num</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#Jupiter.get_agent_num"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.Jupiter.get_agent_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>自動交渉に参加するエージェントの数を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">自動交渉に参加するエージェントの数</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="simulator.jupiter.display_log">
+<code class="descclassname">simulator.jupiter.</code><code class="descname">display_log</code><span class="sig-paren">(</span><em>file_name</em>, <em>number_of_repeating</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#display_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.display_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>指定した提案応答履歴から，指定したindexの提案応答ゲームを再生する．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_name</strong> (<em>str</em>) – 再生したい提案応答ゲームの履歴のパス</li>
+<li><strong>number_of_repeating</strong> (<em>int</em>) – 再生したい提案応答ゲームのindex</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="simulator.jupiter.test">
+<code class="descclassname">simulator.jupiter.</code><code class="descname">test</code><span class="sig-paren">(</span><em>is_printed=True</em>, <em>is_notebook=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/jupiter.html#test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.jupiter.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-simulator.matplotrecorder">
+<span id="simulator-matplotrecorder-module"></span><h2>simulator.matplotrecorder module<a class="headerlink" href="#module-simulator.matplotrecorder" title="Permalink to this headline">¶</a></h2>
+<p>imported from <a class="reference external" href="https://github.com/AtsushiSakai/matplotrecorder">https://github.com/AtsushiSakai/matplotrecorder</a></p>
+<p>A simple Python module for recording matplotlib animation</p>
+<p>This tool use convert command of ImageMagick</p>
+<p>author: Atsushi Sakai</p>
+<p>How to use:</p>
+<ul>
+<li><p class="first">import</p>
+<blockquote>
+<div><p>from matplotrecorder import matplotrecorder</p>
+</div></blockquote>
+</li>
+<li><p class="first">save file</p>
+<blockquote>
+<div><p>matplotrecorder.save_frame()</p>
+</div></blockquote>
+</li>
+<li><p class="first">generate movie</p>
+<blockquote>
+<div><p>matplotrecorder.save_movie(“animation.gif”, 0.1)</p>
+</div></blockquote>
+</li>
+</ul>
+<dl class="function">
+<dt id="simulator.matplotrecorder.save_frame">
+<code class="descclassname">simulator.matplotrecorder.</code><code class="descname">save_frame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/matplotrecorder.html#save_frame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.matplotrecorder.save_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a frame for movie</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="simulator.matplotrecorder.save_movie">
+<code class="descclassname">simulator.matplotrecorder.</code><code class="descname">save_movie</code><span class="sig-paren">(</span><em>fname</em>, <em>d_pause</em>, <em>monitor=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/matplotrecorder.html#save_movie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.matplotrecorder.save_movie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save movie as gif</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.negotiationRule">
+<span id="simulator-negotiationrule-module"></span><h2>simulator.negotiationRule module<a class="headerlink" href="#module-simulator.negotiationRule" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.negotiationRule.TypeOfNegotiation">
+<em class="property">class </em><code class="descclassname">simulator.negotiationRule.</code><code class="descname">TypeOfNegotiation</code><a class="reference internal" href="_modules/simulator/negotiationRule.html#TypeOfNegotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.TypeOfNegotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>列挙型
+自動交渉のtypeを表す</p>
+<dl class="attribute">
+<dt id="simulator.negotiationRule.TypeOfNegotiation.Turn">
+<code class="descname">Turn</code><em class="property"> = 1</em><a class="headerlink" href="#simulator.negotiationRule.TypeOfNegotiation.Turn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="simulator.negotiationRule.TypeOfNegotiation.Time">
+<code class="descname">Time</code><em class="property"> = 2</em><a class="headerlink" href="#simulator.negotiationRule.TypeOfNegotiation.Time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.negotiationRule.NegotiationRule">
+<em class="property">class </em><code class="descclassname">simulator.negotiationRule.</code><code class="descname">NegotiationRule</code><span class="sig-paren">(</span><em>time_max_ms: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>自動交渉を行う際のルール
+各ルールはこのクラスを継承すること</p>
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRule.get_type">
+<code class="descname">get_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRule.get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRule.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>自動交渉のタイプを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.negotiationRule.TypeOfNegotiation" title="simulator.negotiationRule.TypeOfNegotiation">TypeOfNegotiation</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">自動交渉のタイプ</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRule.get_time_now">
+<code class="descname">get_time_now</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRule.get_time_now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRule.get_time_now" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉中における，正規化された現在の時刻を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">正規化された現在の時刻</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.negotiationRule.NegotiationRuleTurn">
+<em class="property">class </em><code class="descclassname">simulator.negotiationRule.</code><code class="descname">NegotiationRuleTurn</code><span class="sig-paren">(</span><em>time_max_turn: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTurn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTurn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.negotiationRule.NegotiationRule" title="simulator.negotiationRule.NegotiationRule"><code class="xref py py-class docutils literal"><span class="pre">simulator.negotiationRule.NegotiationRule</span></code></a></p>
+<p>自動交渉を行う際のルールの1つ
+ターン制</p>
+<p>turn制のとき用いる自動交渉のルール</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_max_turn</strong> (<em>int</em>) – 最大ターン数</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTurn.get_time_max">
+<code class="descname">get_time_max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTurn.get_time_max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTurn.get_time_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>その交渉における最大ターン数を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">その交渉における最大ターン数</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTurn.get_time_now">
+<code class="descname">get_time_now</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTurn.get_time_now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTurn.get_time_now" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉中における，正規化された現在の時刻を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">正規化された現在の時刻</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTurn.get_type">
+<code class="descname">get_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTurn.get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTurn.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>自動交渉のタイプを返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.negotiationRule.TypeOfNegotiation.Turn" title="simulator.negotiationRule.TypeOfNegotiation.Turn">TypeOfNegotiation.Turn</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">自動交渉のタイプ</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="simulator.negotiationRule.NegotiationRuleTime">
+<em class="property">class </em><code class="descclassname">simulator.negotiationRule.</code><code class="descname">NegotiationRuleTime</code><span class="sig-paren">(</span><em>time_max_s: float</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.negotiationRule.NegotiationRule" title="simulator.negotiationRule.NegotiationRule"><code class="xref py py-class docutils literal"><span class="pre">simulator.negotiationRule.NegotiationRule</span></code></a></p>
+<p>自動交渉を行う際のルールの1つ
+時間制</p>
+<p>time制のとき用いる自動交渉のルール</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_max_s</strong> (<em>float</em>) – 最大の交渉時間．単位は秒．</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTime.get_time_max">
+<code class="descname">get_time_max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTime.get_time_max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTime.get_time_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>その交渉における最大の時間を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">その交渉における最大の交渉時間．単位は秒</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTime.get_time_now">
+<code class="descname">get_time_now</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTime.get_time_now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTime.get_time_now" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉中における，正規化された現在の時刻を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">正規化された現在の時刻</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.negotiationRule.NegotiationRuleTime.get_type">
+<code class="descname">get_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/negotiationRule.html#NegotiationRuleTime.get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.negotiationRule.NegotiationRuleTime.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>自動交渉のタイプを返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.negotiationRule.TypeOfNegotiation.Time" title="simulator.negotiationRule.TypeOfNegotiation.Time">TypeOfNegotiation.Time</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">自動交渉のタイプ</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.readUtilityFile">
+<span id="simulator-readutilityfile-module"></span><h2>simulator.readUtilityFile module<a class="headerlink" href="#module-simulator.readUtilityFile" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.readUtilityFile.ReadXML">
+<em class="property">class </em><code class="descclassname">simulator.readUtilityFile.</code><code class="descname">ReadXML</code><a class="reference internal" href="_modules/simulator/readUtilityFile.html#ReadXML"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.readUtilityFile.ReadXML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Geniusで作成された効用ドメインファイルを読み込む</p>
+<dl class="method">
+<dt id="simulator.readUtilityFile.ReadXML.create_utility">
+<code class="descname">create_utility</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/readUtilityFile.html#ReadXML.create_utility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.readUtilityFile.ReadXML.create_utility" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用ドメインファイルを読み込んで，内容をリストで返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name</strong> (<em>str</em>) – 読み込みたいファイルのパス</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">読み込んだ情報のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.summrizationOfUtilitySpace">
+<span id="simulator-summrizationofutilityspace-module"></span><h2>simulator.summrizationOfUtilitySpace module<a class="headerlink" href="#module-simulator.summrizationOfUtilitySpace" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace">
+<em class="property">class </em><code class="descclassname">simulator.summrizationOfUtilitySpace.</code><code class="descname">SummrizationOfUtilitySpace</code><span class="sig-paren">(</span><em>file_name_list: [&lt;class 'str'&gt;]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>utilitySpaceを統括する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name_list</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – 自動交渉に用いるファイルのパスのリスト</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.is_valid_bid">
+<code class="descname">is_valid_bid</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.is_valid_bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.is_valid_bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bidに正しい値が格納されているか調べる．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Bid</strong> (<a class="reference internal" href="#module-simulator.bid" title="simulator.bid"><em>bid</em></a>) – Bidが正しい値が格納されているか調べる．</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Bidに正しい値が格納されているかどうか</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_utility_space">
+<code class="descname">get_utility_space</code><span class="sig-paren">(</span><em>index: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.get_utility_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_utility_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>指定したindexのAbstractUtilitySpaceを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – 入手したいAbstractUtilitySpaceのインデックス</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace" title="simulator.abstractUtilitySpace.AbstractUtilitySpace">AbstractUtilitySpace</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">効用ドメイン情報</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_utility_num">
+<code class="descname">get_utility_num</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.get_utility_num"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_utility_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用ドメインファイルの数を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">効用ドメインファイルの数</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_weight_np_list">
+<code class="descname">get_weight_np_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.get_weight_np_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_weight_np_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用値情報のリストを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[np.array]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">効用値情報のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_discount_factor_list">
+<code class="descname">get_discount_factor_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.get_discount_factor_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_discount_factor_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引効用のリストを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[float]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">割引効用のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_reservation_value_list">
+<code class="descname">get_reservation_value_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/summrizationOfUtilitySpace.html#SummrizationOfUtilitySpace.get_reservation_value_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.summrizationOfUtilitySpace.SummrizationOfUtilitySpace.get_reservation_value_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>留保価格のリストを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[float]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">留保価格のリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-simulator.utilitySpace">
+<span id="simulator-utilityspace-module"></span><h2>simulator.utilitySpace module<a class="headerlink" href="#module-simulator.utilitySpace" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="simulator.utilitySpace.UtilitySpace">
+<em class="property">class </em><code class="descclassname">simulator.utilitySpace.</code><code class="descname">UtilitySpace</code><span class="sig-paren">(</span><em>file_name: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#simulator.abstractUtilitySpace.AbstractUtilitySpace" title="simulator.abstractUtilitySpace.AbstractUtilitySpace"><code class="xref py py-class docutils literal"><span class="pre">simulator.abstractUtilitySpace.AbstractUtilitySpace</span></code></a></p>
+<p>線形効用空間のクラス</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name</strong> (<em>str</em>) – 効用ドメインファイルのパス</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_file_name">
+<code class="descname">get_file_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_file_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>交渉ドメインファイルのパスを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">交渉ドメインファイルのパス</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_index">
+<code class="descname">get_index</code><span class="sig-paren">(</span><em>issue_number</em>, <em>item_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>指定された論点における，itemのindexを返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>issue_number</strong> (<em>int</em>) – 調べたい論点のindex</li>
+<li><strong>item_name</strong> (<em>str</em>) – indexを知りたいitem</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">指定された論点における，itemのindex</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>issue_number</em>, <em>item_index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>指定された論点におけるindexのitemを返す.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>issue_number</strong> (<em>int</em>) – 調べたい論点のindex</li>
+<li><strong>item_index</strong> (<em>int</em>) – itemを知りたいindex</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">指定された論点における，indexのitem</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_reservation_value">
+<code class="descname">get_reservation_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_reservation_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_reservation_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>留保価格を返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">留保価格</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_discount_reservation_value">
+<code class="descname">get_discount_reservation_value</code><span class="sig-paren">(</span><em>time</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_discount_reservation_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_discount_reservation_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引効用込みの留保価格を返す．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time</strong> (<em>float</em>) – 交渉の正規化された経過時間</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">割引済みの留保価格</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_discount_factor">
+<code class="descname">get_discount_factor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_discount_factor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_discount_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引効用を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">割引効用</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_weight_np_list">
+<code class="descname">get_weight_np_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_weight_np_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_weight_np_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用値を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">np.array</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">効用値</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_issue_size_list">
+<code class="descname">get_issue_size_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_issue_size_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_issue_size_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>各論点の大きさのリストを返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List[int]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">各論点の大きさのリスト</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_utility">
+<code class="descname">get_utility</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_utility"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_utility" title="Permalink to this definition">¶</a></dt>
+<dd><p>効用値を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bid</strong> (<a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid"><em>Bid</em></a>) – 効用値を計算するbid</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">効用値</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_bid_above_concession_value">
+<code class="descname">get_bid_above_concession_value</code><span class="sig-paren">(</span><em>concession_value</em>, <em>make_num=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_bid_above_concession_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_bid_above_concession_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>乱数によりBid生成する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid">Bid</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">乱数により生成されたBid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_utility_discounted">
+<code class="descname">get_utility_discounted</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em>, <em>time: float</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_utility_discounted"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_utility_discounted" title="Permalink to this definition">¶</a></dt>
+<dd><p>割引済みの効用値を返す</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bid</strong> (<a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid"><em>Bid</em></a>) – 効用値を計算したいBid</li>
+<li><strong>time</strong> (<em>float</em>) – 正規化された交渉の経過時間</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">割引済みの効用値</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.get_bid_by_random_number">
+<code class="descname">get_bid_by_random_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; simulator.bid.Bid<a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.get_bid_by_random_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.get_bid_by_random_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>乱数によりBid生成する</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#simulator.bid.Bid" title="simulator.bid.Bid">Bid</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">乱数により生成されたBid</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="simulator.utilitySpace.UtilitySpace.is_valid_bid">
+<code class="descname">is_valid_bid</code><span class="sig-paren">(</span><em>bid_: simulator.bid.Bid</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/simulator/utilitySpace.html#UtilitySpace.is_valid_bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#simulator.utilitySpace.UtilitySpace.is_valid_bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bidに正しい値が格納されているか調べる．</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Bid</strong> (<a class="reference internal" href="#module-simulator.bid" title="simulator.bid"><em>bid</em></a>) – Bidが正しい値が格納されているか調べる．</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Bidに正しい値が格納されているかどうか</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<span class="target" id="module-simulator"></span></div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to simulator’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Tomoya Fukui.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

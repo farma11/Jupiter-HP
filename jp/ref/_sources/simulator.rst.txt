@@ -1,0 +1,115 @@
+simulator package
+=================
+
+
+simulator\.abstractAgent module
+-------------------------------
+
+.. automodule:: simulator.abstractAgent
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.abstractUtilitySpace module
+--------------------------------------
+
+.. automodule:: simulator.abstractUtilitySpace
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.agentAction module
+-----------------------------
+
+.. automodule:: simulator.agentAction
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.bid module
+---------------------
+
+.. automodule:: simulator.bid
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.calculator module
+----------------------------
+
+.. automodule:: simulator.calculator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.comunicateJavaAgent module
+-------------------------------------
+
+.. automodule:: simulator.comunicateJavaAgent
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.display module
+-------------------------
+
+.. automodule:: simulator.display
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.jupiter module
+-------------------------
+
+.. automodule:: simulator.jupiter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.matplotrecorder module
+---------------------------------
+
+.. automodule:: simulator.matplotrecorder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.negotiationRule module
+---------------------------------
+
+.. automodule:: simulator.negotiationRule
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.readUtilityFile module
+---------------------------------
+
+.. automodule:: simulator.readUtilityFile
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.summrizationOfUtilitySpace module
+--------------------------------------------
+
+.. automodule:: simulator.summrizationOfUtilitySpace
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.utilitySpace module
+------------------------------
+
+.. automodule:: simulator.utilitySpace
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+---------------
+
+.. automodule:: simulator
+    :members:
+    :undoc-members:
+    :show-inheritance:

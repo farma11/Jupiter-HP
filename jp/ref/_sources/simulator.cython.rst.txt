@@ -1,0 +1,30 @@
+simulator\.cython package
+=========================
+
+Submodules
+----------
+
+simulator\.cython\.make\_bid module
+-----------------------------------
+
+.. automodule:: simulator.cython.make_bid
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+simulator\.cython\.setup module
+-------------------------------
+
+.. automodule:: simulator.cython.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: simulator.cython
+    :members:
+    :undoc-members:
+    :show-inheritance:
