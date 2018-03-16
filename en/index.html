@@ -20,6 +20,7 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/product.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/prettify.css">
 
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
@@ -103,6 +104,20 @@
           </div><!-- /.row -->
     </div><!-- /Feature -->
 
+    <div class="container">
+        <h2>インストール方法</h2>
+        <p>
+          Jupiter is on PyPI, so you can use pip to install it:
+        </p>
+<pre class="prettyprint">
+<code>
+    # bash
+    $ pip install jupiter-negotiation
+</code>
+</pre>
+
+      </div>
+
     <div class="container" id="news">
       <h2>News</h2>
 
@@ -144,6 +159,13 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/holder.min.js"></script>
+    <script src="../js/prettify.js"></script>
+
+    <script>
+        $(function(){
+            prettyPrint(); 
+        });
+      </script>
   </body>
 </html>
 
