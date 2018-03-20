@@ -82,3 +82,7 @@ body > .container {
 code {
   font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
+
+.card-img {
+  width: 400px;
+}
